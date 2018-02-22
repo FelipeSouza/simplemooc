@@ -13,7 +13,8 @@ class Course(models.Model):
 
     name = models.CharField('Nome', max_length=200)
     slug = models.SlugField('Atalho')
-    description = models.TextField('Descrição', blank=True)
+    description = models.TextField('Descrição simples', blank=True)
+    about = models.TextField('Sobre o curso', blank=True)
     start_date = models.DateField('Data início', null=True, blank=True)
     image = models.ImageField(
         upload_to='courses/images', verbose_name='Imagem',
