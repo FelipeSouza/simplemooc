@@ -19,8 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path ('', include('simplemooc.core.urls')),
-    path ('', include ('simplemooc.courses.urls')),
+    path ('', 'simplemooc.core.urls', name='home'),
+    path ('cursos/', 'simplemooc.courses.urls', name='courses'),
     path('admin/', admin.site.urls),
 ]
 
